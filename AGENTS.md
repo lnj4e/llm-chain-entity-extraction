@@ -8,6 +8,8 @@ Python CLI tool that uses LLM chains to extract clinical/medical entities from f
 
 `pip install -r requirements.txt` — installs `python-dotenv`, `bardapi`, `openai`, `requests`.
 
+**httpx version conflict**: `bardapi` pulls in `httpx>=0.28` which breaks `openai==1.25.2` (removed `proxies` kwarg). After installing requirements, downgrade httpx: `pip install 'httpx>=0.23.0,<0.28.0'`.
+
 ### Running the tool
 
 ```
